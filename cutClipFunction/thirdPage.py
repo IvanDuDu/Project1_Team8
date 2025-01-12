@@ -22,7 +22,7 @@ class ThirdWindow(QWidget):
 
     def initUI(self):
         # Cài đặt hình nền
-        background_image_path = 'D:\\CODIng\\CV\\Project1_Team8\\thirdPage.png'
+        background_image_path = 'thirdPage.png'
 
         pixmap = QPixmap(background_image_path)
         if pixmap.isNull():
@@ -95,7 +95,6 @@ class ThirdWindow(QWidget):
         self.scroll_widget.setStyleSheet("background-color: #00a181; border: none;")  # Match green background
         self.scroll_area.setWidget(self.scroll_widget)  # Set the widget in the scroll area
 
-        # Add a grid layout to the scroll widget
         self.extra_grid_layout = QGridLayout(self.scroll_widget)
         self.extra_grid_layout.setContentsMargins(5, 5, 5, 5)  # Set small margins
         self.extra_grid_layout.setSpacing(5)  # Spacing between buttons
@@ -286,7 +285,7 @@ class ThirdWindow(QWidget):
                 font-size: 14px; 
                 font-weight: bold;
                 color: white;
-                background-color: #007acc;
+                background-color: #00a181;
                 padding: 2px; 
                 min-width: 100px;  
                 max-width: 120px;  
@@ -295,8 +294,8 @@ class ThirdWindow(QWidget):
             }
             QPushButton {border-radius: 4px;}
             QPushButton:hover {
-                background-color: #5dade2;
-                color: #ffffff;
+                background-color: #7ed957;
+                color: #004651;
             }
         """
 
