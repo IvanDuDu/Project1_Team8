@@ -138,7 +138,7 @@ def execute(imageInput, video_path, faceInInput):
     segmented_objects = object_segmentation(video_path)
     segmented_actions = action_segmentation(video_path)
 
-    output_path = "exportVideo\\KhanhNgoc.mp4"
+    output_path = "D:\CODIng\CV\YOLO Image Detection\dung.mp4"
 
     # if segmented_objects or segmented_actions:
     #     return output_path,clipsDetail,segmented_objects, segmented_actions
