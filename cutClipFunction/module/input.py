@@ -1,7 +1,6 @@
 from PIL import Image
 import cv2 as cv
 import os
-import face_recognition
 from ultralytics import YOLO
 from module.YOLOverse import face_encodings
 

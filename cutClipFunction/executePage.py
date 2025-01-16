@@ -1,14 +1,11 @@
 from PySide6.QtWidgets import (
-    QApplication, QWidget, QPushButton, QFileDialog, QMessageBox, QGridLayout, QLabel
+    QApplication, QWidget, QPushButton, QMessageBox, QGridLayout, QLabel
 )
 import cv2 as cv
 from PySide6.QtGui import QPixmap, QPalette, QBrush, QPainter,QImage
 from PySide6.QtCore import Qt,QRect, QTimer
-from PySide6.QtMultimedia import QMediaPlayer
-from PySide6.QtMultimediaWidgets import QVideoWidget
-from PySide6.QtCore import QUrl
 import sys
-from thirdPage import ThirdWindow
+
 
 
 

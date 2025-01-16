@@ -5,8 +5,6 @@ from PySide6.QtMultimedia import QMediaPlayer
 from PySide6.QtMultimediaWidgets import QVideoWidget
 from PySide6.QtWidgets import (QApplication, QFileDialog, QGridLayout, QLabel,
                                QMessageBox, QPushButton, QVBoxLayout, QWidget)
-
-from module.input import faceInInput
 from module.input import inputProcess
 from thirdPage import ThirdWindow
 from module.YOLOverse import execute
