@@ -22,7 +22,7 @@ class ThirdWindow(QWidget):
 
     def initUI(self):
         # Cài đặt hình nền
-        background_image_path = 'D:\\CODIng\\CV\\Project1_Team8\\thirdPage.png'
+        background_image_path = 'thirdPage.png'
 
         pixmap = QPixmap(background_image_path)
         if pixmap.isNull():
@@ -286,7 +286,7 @@ class ThirdWindow(QWidget):
                 font-size: 14px; 
                 font-weight: bold;
                 color: white;
-                background-color: #007acc;
+                background-color:  #00a181;
                 padding: 2px; 
                 min-width: 100px;  
                 max-width: 120px;  
@@ -295,8 +295,8 @@ class ThirdWindow(QWidget):
             }
             QPushButton {border-radius: 4px;}
             QPushButton:hover {
-                background-color: #5dade2;
-                color: #ffffff;
+                background-color: #7ed957;
+                color: #004651;
             }
         """
 
@@ -325,53 +325,53 @@ class ThirdWindow(QWidget):
         """
 
 
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
+# if __name__ == "__main__":
+#     app = QApplication(sys.argv)
 
-    # Dữ liệu mẫu cho clipsDetail
-    clipsDetail = [
-        {
-            "start_time": "00:00:05",
-            "end_time": "00:00:15",
-            "detected_objects": ["Car", "Tree", "Dog"]
-        },
-        {
-            "start_time": "00:01:00",
-            "end_time": "00:01:30",
-            "detected_objects": ["Person", "Bicycle"]
-        },
-        {
-            "start_time": "00:02:00",
-            "end_time": "00:02:30",
-            "detected_objects": ["Cat", "Bus"]
-        },
-    ]
+#     # Dữ liệu mẫu cho clipsDetail
+#     clipsDetail = [
+#         {
+#             "start_time": "00:00:05",
+#             "end_time": "00:00:15",
+#             "detected_objects": ["Car", "Tree", "Dog"]
+#         },
+#         {
+#             "start_time": "00:01:00",
+#             "end_time": "00:01:30",
+#             "detected_objects": ["Person", "Bicycle"]
+#         },
+#         {
+#             "start_time": "00:02:00",
+#             "end_time": "00:02:30",
+#             "detected_objects": ["Cat", "Bus"]
+#         },
+#     ]
 
-    segmented_objects = {
-        "Chair": [
-            {"track_id": 1,"image_path":  "exportVideo\segmentedImages\chair\chair_50_Frames1226_1240.jpg","appear_frame": 1226, "disappear_frame": 1240}
-        ],
-        "Person": [
-            {"track_id": 3, "image_path": "exportVideo\segmentedImages\person\person_1_Frames2_148.jpg","appear_frame": 1, "disappear_frame": 148}
-        ]
-    }
+#     segmented_objects = {
+#         "Chair": [
+#             {"track_id": 1,"image_path":  "exportVideo\segmentedImages\chair\chair_50_Frames1226_1240.jpg","appear_frame": 1226, "disappear_frame": 1240}
+#         ],
+#         "Person": [
+#             {"track_id": 3, "image_path": "exportVideo\segmentedImages\person\person_1_Frames2_148.jpg","appear_frame": 1, "disappear_frame": 148}
+#         ]
+#     }
 
-    # Example segmented_actions
-    segmented_actions = {
-        "A person with a chair": [
-            {
-                "object1": "Person",
-                "object2": "Chair",
-                "appear_time": 4,  # Start time in seconds
-                "disappear_time": 64,  # End time in seconds
-                "video_path": "exportVideo\segmentedVideos\A_person_21_is_sitting_on_a_chair_22_Frames_494_516.mp4",
-                "description": "A person holding a cup"
-            }
-        ]
-    }
+#     # Example segmented_actions
+#     segmented_actions = {
+#         "A person with a chair": [
+#             {
+#                 "object1": "Person",
+#                 "object2": "Chair",
+#                 "appear_time": 4,  # Start time in seconds
+#                 "disappear_time": 64,  # End time in seconds
+#                 "video_path": "exportVideo\segmentedVideos\A_person_21_is_sitting_on_a_chair_22_Frames_494_516.mp4",
+#                 "description": "A person holding a cup"
+#             }
+#         ]
+#     }
 
-    video_path = "exportVideo\segmentedVideos\A_person_21_is_sitting_on_a_chair_22_Frames_494_516.mp4" # Thay bằng đường dẫn thực tế
-    window = ThirdWindow(video_path=video_path, clipDetail=clipsDetail,segmented_objects=segmented_objects, segmented_actions=segmented_actions)
-    window.show()
+#     video_path = "exportVideo\segmentedVideos\A_person_21_is_sitting_on_a_chair_22_Frames_494_516.mp4" # Thay bằng đường dẫn thực tế
+#     window = ThirdWindow(video_path=video_path, clipDetail=clipsDetail,segmented_objects=segmented_objects, segmented_actions=segmented_actions)
+#     window.show()
 
-    sys.exit(app.exec())
+#     sys.exit(app.exec())

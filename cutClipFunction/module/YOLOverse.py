@@ -10,8 +10,6 @@ from trackFunction import trackerFunc, object_segmentation, action_segmentation
 
 model = YOLO("yolo11m.pt")
 
-
-# Load YOLO model
 def face_encodings(image, model):
     results = model.predict(source=image, conf=0.5)
     encodings = []
@@ -138,7 +136,7 @@ def execute(imageInput, video_path, faceInInput):
     segmented_objects = object_segmentation(video_path)
     segmented_actions = action_segmentation(video_path)
 
-    output_path = "D:\CODIng\CV\YOLO Image Detection\dung.mp4"
+    output_path = "outputVideo\\KhanhNgoc.mp4"
 
     # if segmented_objects or segmented_actions:
     #     return output_path,clipsDetail,segmented_objects, segmented_actions
@@ -157,4 +155,3 @@ def execute(imageInput, video_path, faceInInput):
         print("Oops! I did it again!! I couldn't get any clip which having her face")
         return [0,0,0,0]
 
-# file gốc YOLO nằm ở đây

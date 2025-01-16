@@ -1,5 +1,4 @@
 import sys
-
 from PySide6.QtCore import Qt, QUrl
 from PySide6.QtGui import QBrush, QIcon, QPalette, QPixmap
 from PySide6.QtMultimedia import QMediaPlayer
@@ -11,8 +10,6 @@ from module.input import faceInInput
 from module.input import inputProcess
 from thirdPage import ThirdWindow
 from module.YOLOverse import execute
-
-# from trackFunction import tracker
 
 
 style = """
@@ -108,7 +105,7 @@ class FaceRecognitionUI(QWidget):
         """)
         icon = QIcon("rock3.png")  # Replace with your icon path
         self.launch_button.setIcon(icon)
-        self.launch_button.setIconSize(self.launch_button.size() * 0.6)
+        self.launch_button.setIconSize(self.launch_button.size() * 0.8)
         self.launch_button.clicked.connect(self.launch)
 
     def set_background_and_size(self, image_path):
@@ -212,14 +209,6 @@ class FaceRecognitionUI(QWidget):
             self.video_player.play()
 
     def launch(self):
-
-        # # Phan nay dung de test ghep code cua module trackFunction
-        # imageInput = []
-        # faceInInput = []
-        # output_path, clipDetail, segmented_objects, segmented_actions = execute(imageInput, self.video_path, faceInInput)
-        #
-        # self.win=ThirdWindow(output_path,clipDetail,segmented_objects,segmented_actions)
-        # self.win.show()
 
        [imageInput,faceInInput]=inputProcess(images_path= self.image_paths)
        if(self.video_path=="" or [imageInput,faceInInput]==[0,0]) : QMessageBox.information(self, "Help", """There's no face recognise in all images. Make sure that images have face!!!""")
