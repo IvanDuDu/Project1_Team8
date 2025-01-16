@@ -22,7 +22,7 @@ class ThirdWindow(QWidget):
 
     def initUI(self):
         # Cài đặt hình nền
-        background_image_path = 'D:\\CODIng\\CV\\Project1_Team8\\thirdPage.png'
+        background_image_path = 'thirdPage.png'
 
         pixmap = QPixmap(background_image_path)
         if pixmap.isNull():
